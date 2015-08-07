@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/control"
+        android:layout_gravity="left|top"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/channel_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Agora Voice" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/identification_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/control"
+        android:layout_centerInParent="true" >
+
+        <EditText
+            android:id="@+id/key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:hint="Type key authorized by Agora Lab"
+            android:inputType="number"
+            android:text="6D7A26A1D3554A54A9F43BE6797FE3E2" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/key"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:hint="Type User ID(Optional)"
+            android:inputType="number" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/channel_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_id"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:hint="Type Channel ID"
+            android:inputType="number" >
+        </EditText>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/btn_ctrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join" /> <!-- or Mute/Unmute -->
+
+        <Button
+            android:id="@+id/btn_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Speaker" />
+
+        <Button
+            android:id="@+id/btn_leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave" />
+    </LinearLayout>
+
+</RelativeLayout>
